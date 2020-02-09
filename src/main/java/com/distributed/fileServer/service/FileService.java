@@ -47,7 +47,7 @@ public class FileService {
 
         byte[] hash = digest.digest();
         String encodedHash = new BASE64Encoder().encode(hash);
-        System.out.println(encodedHash);
+        System.out.println("Hash code: " + encodedHash);
 
         return encodedHash;
     }

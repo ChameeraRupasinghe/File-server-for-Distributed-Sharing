@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 import java.security.NoSuchAlgorithmException;
 
 @RestController
@@ -25,6 +27,7 @@ public class FileController {
 
     @RequestMapping(value = "/{fileName}", method = RequestMethod.GET)
     public ResponseEntity<Resource> downloadFile(@PathVariable("fileName") String fileName) {
+
         Resource resource = null;
         File file;
         try {
